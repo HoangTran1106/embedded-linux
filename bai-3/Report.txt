@@ -1,0 +1,12 @@
+Vì sao phải có 2 cơ chế này?
+
+Zombie
+1. Lưu trữ Exit Status cho tiến trình cha:
+- Cha có thể gọi wait() bất kỳ lúc nào sau khi con chết để lấy thông tin này
+- Nếu không có zombie, exit status sẽ bị mất ngay khi con chết
+2. Đồng bộ hóa tiến trình cha-con: 
+Cha có thể quyết định hành động tiếp theo dựa trên exit status
+
+Orphan
+1. Cha bị crash đột ngột thì con vẫn chạy bình thường
+2. cơ chế adoption cho phép các tiến trình orphan bị chết (thành zombie), có thể được call wait bởi bash để chấm dứt, nếu không tiến trình đó sẽ chiếm bộ nhớ.  
