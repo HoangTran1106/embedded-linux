@@ -1,4 +1,7 @@
-Vì sao phải có 2 cơ chế này?
+ex2:
+khi exec() được gọi thành công, mã lệnh ko chạy
+không gian địa chỉ bị xóa đi 
+ex3. Vì sao phải có 2 cơ chế này?
 
 Zombie
 1. Lưu trữ Exit Status cho tiến trình cha:
